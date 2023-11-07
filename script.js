@@ -50,7 +50,7 @@ if (mins < 10){
     mins = `00`;
 }
 
-// const fTime = `${hours}:${mins}`; 
+const fTime = `${hours}:${mins}`; 
 // const fTime = `10:25`;
 // const fTime = `13:53`;
 // const fTime = `00:33`;
@@ -96,3 +96,71 @@ const res = calcTime();
 alert (res);
 });
 
+
+
+
+
+
+
+
+///lr 2
+
+
+const href = document.querySelector('.linklr2');
+const numOne = document.querySelector('#firstN');
+const numTwo = document.querySelector('#secondN');
+const operation = document.querySelector('#operation');
+const inputF = document.querySelector('.lr2');
+
+let numOneVal;
+let numTwoVal;
+let operationVal;
+
+href.addEventListener("mouseover", () => {
+    alert('Зараз ви перейдет на сайт google.com')
+}) 
+
+numOne.addEventListener('change', () =>{
+    numOneVal = numOne.value;
+})
+
+numTwo.addEventListener('change', () =>{
+    numTwoVal = numTwo.value;
+})
+
+operation.addEventListener('change', () => {
+    operationVal = operation.value;
+    if (operationVal.toUpperCase() === operationVal.toLowerCase() || (!operationVal)){
+        operation.style.color = 'red';
+    } else {
+        operation.style.color = 'black';
+    }
+})
+
+inputF.addEventListener('mouseleave', () => {
+    if (!operationVal || !numTwoVal || !numOneVal) {
+        alert('заповніть всі поля');
+    } else {
+        let a = +numOneVal;
+        let b = +numTwoVal;
+        let result;
+        switch (operationVal) {
+            case 'сума':
+                result = a + b;
+                break;
+            case 'різниця':
+                result = a - b;
+                break;
+            case 'добуток':
+                result = a * b;
+                break;
+            case 'ділення':
+                result = a / b;
+                break;
+            default:
+                alert('Невірна операція');
+                return;
+        }
+        alert(`Результат ${result}`);
+    }
+});

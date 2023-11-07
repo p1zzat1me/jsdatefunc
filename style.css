@@ -109,61 +109,104 @@ html{
 }
 
 
-body{
-   display: flex;
-    margin: 50px;
-    background-color: lightgray;
-    width: 100vw;
-    height: 100vh;
-    justify-self: center;
-   
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
 }
 
 .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center; 
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }
 
-h1 {
+.a-head {
     text-align: center;
-    font-size: 34px;
+    margin-bottom: 20px;
 }
 
-main > h2 {
-    font-weight: bold;
-    
+.a-head h1, .a-head h2, .a-head h3 {
+    margin: 0;
 }
 
-
-
-h2{
-    font: 1em sans-serif;
-    text-align: center;
-    padding: 10px 0 5px 0;
+.taskdesc {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px 0;
 }
 
-.taskdesc p {
-   text-align: left;
-  position: relative;
-  left:10%;
-}
-
-button {
-    background: wheat;
-    margin: 50px;
+.btn-b {
+    display: block;
     width: 200px;
     height: 50px;
+    margin: 20px auto;
+    background-color: #415167;
+    color: #fff;
     text-align: center;
-    border-radius: 20px;
-    border: 2px solid black;
-   
-   
+    line-height: 50px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
 }
 
-#final{
-    font-weight: bold;
-    font-size: 33px;
+.btn-b:hover {
+    background-color: #C7A17A;
+    cursor: pointer;
+}
+
+.menu-main {
+    list-style-type: none;
+    background-color: #415167;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-main li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+
+
+.menu-main a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-main a:hover {
+    color: rgb(252, 252, 164);
+    cursor: pointer;
+}
+
+.linklr2 {
+    margin-left: 20px;
+
+}
+
+.linklr2:hover {
+    color: lightpink;
+}
+
+.inputs {
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px 0 0 20px;
+    justify-content: left;
+}
+.inputs input{
+background: lightgrey;
+ border: 1px solid black;
+ margin: 10px;
+ text-align: center;
 }
 
