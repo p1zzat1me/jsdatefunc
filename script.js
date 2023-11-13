@@ -164,3 +164,37 @@ inputF.addEventListener('mouseleave', () => {
         alert(`Результат ${result}`);
     }
 });
+
+
+
+
+//// lr3
+
+
+
+const btnPressOne =  document.querySelector("#thirdLr");
+const inputOne  =  document.querySelector("#countryList");
+const listOne = document.querySelector("#listOne");
+btnPressOne.addEventListener('click', () => {
+    const countriesArr = inputOne.value.split(' ') || inputOne.value().split(',');
+    console.log(countriesArr);
+    countriesArr.forEach(element => {
+        let liOne = document.createElement('li');
+        liOne.textContent = element;
+        listOne.appendChild(liOne);
+    });
+});
+
+const inputTwo  =  document.querySelector("#countryComma");
+const pEmpty = document.querySelector("#emptyCommaP");
+const arr = [];
+
+inputTwo.addEventListener('keypress', (e)=> {
+    if (e.key === 'Enter') {
+        arr.push(inputTwo.value)
+        inputTwo.value = '';
+        pEmpty.textContent = arr.join(', ');
+      }
+})
+
+

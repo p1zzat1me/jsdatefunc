@@ -116,6 +116,11 @@ body {
     background-color: #f0f0f0;
 }
 
+.horiz-line {
+    border-bottom: 2px solid #415167;
+    margin-bottom: 20px; 
+}
+
 .main {
     width: 80%;
     margin: 0 auto;
@@ -133,7 +138,7 @@ body {
     margin: 0;
 }
 
-.taskdesc {
+.taskdesc:not(:nth-child(1)) {
     background-color: #f9f9f9;
     padding: 10px;
     margin: 20px 0;
@@ -157,6 +162,14 @@ body {
     cursor: pointer;
 }
 
+#second {
+    background-color: #fab5b5 !important;
+}
+
+#second .des {
+    padding: 10px;
+    margin: 20px 0;
+}
 .menu-main {
     list-style-type: none;
     background-color: #415167;
@@ -165,6 +178,7 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,9 +188,6 @@ body {
     display: inline-block;
     margin-right: 20px;
 }
-
-
-
 
 .menu-main a {
     color: #fff;
@@ -202,6 +213,7 @@ body {
     font-size: 18px;
     padding: 10px 0 0 20px;
     justify-content: left;
+  
 }
 .inputs input{
 background: lightgrey;
@@ -210,3 +222,20 @@ background: lightgrey;
  text-align: center;
 }
 
+#countryComma, #countryList {
+background: lightblue;
+border: 1px solid black;
+margin: 10px;
+}
+
+#thirdLr {
+    background: lightgreen;
+    margin: 0 auto;
+    width: 10%;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 4px;
+    position: relative;
+    left: 5%;
+    text-align: center;
+}
