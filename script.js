@@ -198,3 +198,67 @@ inputTwo.addEventListener('keypress', (e)=> {
 })
 
 
+function highlightMaxCell() {
+    
+    const cells = document.querySelectorAll('#myTable td');
+    let maxNumber = -Infinity;
+    cells.forEach(cell => {
+      const number = parseInt(cell.textContent);
+      if (!isNaN(number) && number > maxNumber) {
+        maxNumber = number;
+      }
+    });
+  
+
+    cells.forEach(cell => {
+      const number = parseInt(cell.textContent, 10);
+      if (!isNaN(number) && number === maxNumber) {
+        cell.style.backgroundColor = 'red';
+      } else {
+        cell.style.backgroundColor = ''; 
+      }
+    });
+  }
+  
+
+
+
+  //lr4
+
+
+  class Car {
+    constructor(color, brand, model) {
+        this.color = color;
+        this.brand = brand;
+        this.model = model;
+    }
+
+    show(){
+        let html = "";
+		html += "<tr>";
+		html += "<td>" + this.color + "</td>";
+		html += "<td>" + this.brand + "</td>";
+		html += "<td>" + this.model + "</td>";
+		html += "</tr>";
+		return html;
+    }
+  }
+
+
+  const arrOfCars = [
+     new Car('red', 'BMW', 'M5CS'),
+     new Car('black', 'Mercedes', 'AMG GT'),
+     new Car('green', 'Tesla', 'Plaid')
+  ]
+
+
+  function appearTable() {
+    let table = "<table>";
+    table += "<tr><td>Колір</td><td>Марка</td><td>Модель</td></tr>";
+    arrOfCars.forEach(el => {
+        table += el.show();
+    });
+    table += "</table>";
+    document.getElementById("fTable").innerHTML = table;
+  }
+  
